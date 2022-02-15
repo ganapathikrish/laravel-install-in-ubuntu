@@ -1,0 +1,25 @@
+Here are the steps
+==================
+Step 1 - sudo apt update
+
+Step 2 - Instal php, extenstions and curl
+sudo apt install php
+sudo apt install php7.4-mbstring php7.4-xml php7.4-zip
+sudo apt install curl
+
+Step 3 - Install composer
+curl -s https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+
+Step 4 - composer global require laravel/installer
+
+Step 5 - nano .bashrc
+write - export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+then save the file
+
+Step 6 - source ~/.bashrc
+
+Step 7 - Create new laravel app (name of our app is application) - laravel new application
+go to application directory by typing - cd application/
+then type - php artisan key:generate --ansi
+then type - php artisan serve
